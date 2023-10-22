@@ -1,6 +1,6 @@
 import React from 'react';
 import MapComponent from '../Views/MapComponent';
-import { render, screen } from '@testing-library/react';
+import { render, screen, waitFor } from '@testing-library/react';
 jest.mock("@arcgis/core/WebMap");
 jest.mock("@arcgis/core/views/MapView");
 jest.mock("@arcgis/core/widgets/Legend");
@@ -14,22 +14,16 @@ describe('MapComponent', () => {
         render(<MapComponent />);
     });
     
-    it('displays a loading spinner when loading', () => {
+    it('displays a loading spinner when loading', async () => {
         const { getByTestId } = render(<MapComponent />);
         expect(screen.getByTestId('loading-spinner')).toBeInTheDocument();
     })
 
-    it('renders the map container after loading', () => {
+    it('renders the map container after loading', async () => {
         const { getByTestId } = render(<MapComponent />);
-        expect(screen.getByTestId('map-container')).toBeInTheDocument();
+        await waitFor(() => {
+            expect(screen.getByTestId('map-container')).toBeInTheDocument();
+        });
     });
-
-    // test('sets error state when there is an error', () => {
-    //     const { getByTestId } = render(<MapComponent />);
-
-    //     // Assert that the error message is displayed
-    //     expect(getByTestId('error-text')).toBeInTheDocument();
-    // });
-
 
 })

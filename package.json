@@ -14,6 +14,7 @@
     "@types/node": "^16.18.59",
     "@types/react": "^18.2.31",
     "@types/react-dom": "^18.2.14",
+    "colorbrewer": "^1.5.6",
     "lodash.isnil": "^4.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -22,7 +23,8 @@
     "web-vitals": "^2.1.4"
   },
   "devDependencies": {
-    "@babel/plugin-proposal-private-property-in-object": "^7.16.7"
+    "@types/colorbrewer": "^1.0.31",
+    "@types/lodash": "^4.14.200"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -47,8 +49,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "@types/lodash": "^4.14.200"
   }
 }
