@@ -30,14 +30,14 @@ const MapComponent = () => {
         <div>
             {isLoading &&
                 <div className={Styles.mainContainer}>
-                    <CircularProgress data-test-id="loading-spinner" className={Styles.loading} />
+                    <CircularProgress data-testid="loading-spinner" className={Styles.loading} />
                     <div id="loading-text">
                         <p>Loading map...</p>
                     </div>
                 </div>
             }
             {isError &&
-                <div data-test-id="error-text" className={Styles.mainContainer}>
+                <div data-testid="error-text" className={Styles.mainContainer}>
                     <p>Something went wrong with loading the map. Please try again later.</p>
                 </div>
             }

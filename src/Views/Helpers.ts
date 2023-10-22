@@ -5,7 +5,6 @@ import VectorTileLayer from '@arcgis/core/layers/VectorTileLayer';
 import _isNil from 'lodash/isNil';
 
 export const buildMap = (successCallback: () => void, errorCallback: () => void) => {
-    debugger;
     const basemapLayer = new VectorTileLayer({
         url: "https://tiles.arcgis.com/tiles/XTtANUDT8Va4DLwI/arcgis/rest/services/nz_vector_basemap_v1/VectorTileServer"
     })
