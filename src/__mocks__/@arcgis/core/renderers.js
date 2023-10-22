@@ -1,0 +1,1 @@
+export const ClassBreaksRenderer = jest.fn();

@@ -5,6 +5,12 @@ import VectorTileLayer from '@arcgis/core/layers/VectorTileLayer';
 import FeatureLayer from '@arcgis/core/layers/FeatureLayer';
 import { ClassBreaksRenderer } from '@arcgis/core/renderers';
 import SimpleFillSymbol from '@arcgis/core/symbols/SimpleFillSymbol';
+import BasemapToggle from '@arcgis/core/widgets/BasemapToggle';
+import Compass from '@arcgis/core/widgets/Compass';
+import Home from '@arcgis/core/widgets/Home';
+import LayerList from '@arcgis/core/widgets/LayerList';
+import ScaleBar from '@arcgis/core/widgets/ScaleBar';
+import Legend from '@arcgis/core/widgets/Legend';
 import _isNil from 'lodash/isNil';
 import colorbrewer from 'colorbrewer'
 
@@ -128,11 +134,43 @@ export const buildMap = (successCallback: () => void, errorCallback: () => void)
     if (!_isNil(map) &&
         !_isNil(view)) 
     {
+        const basemapToggle = new BasemapToggle({
+            view: view,
+            nextBasemap: 'satellite'
+
+        })
+
+        const compass = new Compass({
+            view: view
+        })
+
+        const home = new Home({
+            view: view
+        })
+
+        const layerList = new LayerList({
+            view: view
+        })
+
+        const legend = new Legend({
+            view: view
+        })
+
+        const scaleBar = new ScaleBar({
+            view: view
+        })
+
         map.add(basemapLayer)
         map.add(featureLayer);
 
+        view.ui.add(basemapToggle, "bottom-left")
+        view.ui.add(compass, "bottom-left")
+        view.ui.add(home, "bottom-left")
+        view.ui.add(layerList, "top-right")
+        view.ui.add(scaleBar, "bottom-right")
+        view.ui.add(legend, "bottom-right")
         view.when(() => {
-            successCallback();
+            setTimeout(() => successCallback(), 5000);
             view.goTo({
                 center: [172.6306, -43.532],
                 zoom: 15,

@@ -1,11 +1,9 @@
+import Ui from './Ui'
+
 export default class MapView {
     constructor() {
-        this.ui = [];
+        this.ui = new Ui;
         this.location = {};
-    }
-
-    add(map) {
-        this.ui.push(map);
     }
 
     when(callback) {
