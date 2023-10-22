@@ -41,7 +41,7 @@ const MapComponent = () => {
                     <p>Something went wrong with loading the map. Please try again later.</p>
                 </div>
             }
-            <div ref={mapRef} id="map-container" style={{ height: "100vh" }} />
+            <div ref={mapRef} data-testid="map-container" id="map-container" style={{ height: "100vh" }} />
         </div>
     )
 }
