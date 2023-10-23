@@ -1,8 +1,10 @@
-# Getting Started with Create React App
+## Test Map Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<img src="./public/Screen Shot 2023-10-23 at 11.32.06 PM.png">
 
-## Available Scripts
+This is an app employs the Esri Arcgis JS SDK to display NZ land parcel data on an interactive map. It is build on React-Typescript, and uses the Jest testing library as well as Redux.
+
+## How to run, test, and build:
 
 In the project directory, you can run:
 
@@ -10,9 +12,6 @@ In the project directory, you can run:
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
 ### `npm test`
 
@@ -25,22 +24,15 @@ Builds the app for production to the `build` folder.\
 It correctly bundles React in production mode and optimizes the build for the best performance.
 
 The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Then the app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Achievements and Challenges
+I'm pretty happy with how this one came out given the relatively short time spent on it. It works well and looks pretty, and in the end what more can you ask for?
 
-### `npm run eject`
+I really enjoyed this first foray into the Arcgis SDK. There is so much you can do with it, and I feel like I am beging to understand the workflow and have whet the appetite to go deeper.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+As awesome as this library is, the biggest challenges were getting it to play well with React and Jest. It took me quite a while to figure out how to mock all the modules just right so the Jest tests would run. Nonetheless, it was a good learning experience. 
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+There is of course plenty of room for improvement. To make this app production ready I would love to dive deeper into the data and the Arcgis SDK, to see what interesting insights and analysis could be extracted and visualised in the app. As the NZ parcel data set is also quite large, the performance of the app could be certainly be improved. I would love to explore various methods of doing so. 
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+Overall it was great fun. Hope you enjoy experimenting with it!

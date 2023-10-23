@@ -26,7 +26,8 @@
   },
   "devDependencies": {
     "@types/colorbrewer": "^1.0.31",
-    "@types/lodash": "^4.14.200"
+    "@types/lodash": "^4.14.200",
+    "@babel/plugin-proposal-private-property-in-object": "^7.16.7"
   },
   "scripts": {
     "start": "react-scripts start",
