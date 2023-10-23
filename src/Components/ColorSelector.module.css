@@ -1,0 +1,33 @@
+
+
+.colorSelectorContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    gap: 10px;
+    width: 16%;
+    height: 50px;
+    background-color: #fff;
+    font-size: 14px;
+    padding: 10px;
+    z-index: 10;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+    bottom: 11vh;
+    left: 42%;
+}
+
+.colorsContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 60%;
+    height: 25px;
+    cursor: pointer;
+}
+
+.colorItem {
+    width: 20px;
+    height: 20px;
+}

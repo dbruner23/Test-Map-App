@@ -12,3 +12,14 @@
 .loading {
     background-color: transparent;
 }
+
+.instructions {
+    position: absolute;
+    text-align: center;
+    color: #fff;
+    font-size: 18px;
+    width: 100%;
+    z-index: 25;
+    margin-top: 20px;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+}

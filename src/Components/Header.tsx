@@ -7,6 +7,9 @@ const Header = () => {
           <div className={Styles.logo}>
               <img src="https://scanbuddy.ai/wp-content/uploads/2019/06/white_logo_transparent_background.png" alt="logo" />
           </div>
+          <div className={Styles.title}>
+              NZ Land Parcels
+          </div>
           <div className={Styles.navContainer}>
                 <div className={Styles.navItem}>Data Sets</div>
                 <div className={Styles.navItem}>About</div>

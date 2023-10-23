@@ -12,6 +12,14 @@
     height: 50px;
 }
 
+.title {
+    position:absolute;
+    color: #fff;
+    font-size: 24px;
+    width: 100%;
+    text-align: center;
+}
+
 .navContainer {
     display: flex;
     justify-content: space-between;

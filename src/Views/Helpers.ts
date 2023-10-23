@@ -12,9 +12,9 @@ import LayerList from '@arcgis/core/widgets/LayerList';
 import ScaleBar from '@arcgis/core/widgets/ScaleBar';
 import Legend from '@arcgis/core/widgets/Legend';
 import _isNil from 'lodash/isNil';
-import colorbrewer from 'colorbrewer'
+import colorbrewer from 'colorbrewer';
 
-export const buildMap = (successCallback: () => void, errorCallback: () => void) => {
+export const buildMap = (successCallback: () => void, errorCallback: () => void, colorscale: string[]) => {
     const basemapLayer = new VectorTileLayer({
         url: "https://tiles.arcgis.com/tiles/XTtANUDT8Va4DLwI/arcgis/rest/services/nz_vector_basemap_v1/VectorTileServer"
     })
@@ -66,8 +66,6 @@ export const buildMap = (successCallback: () => void, errorCallback: () => void)
             }
         ]
     }
-
-    const colorscale = colorbrewer['YlGnBu'][5]
 
     const featureLayer = new FeatureLayer({
         url: "https://services.arcgis.com/xdsHIIxuCWByZiCB/ArcGIS/rest/services/LINZ_NZ_Primary_Parcels/FeatureServer/0?f=pjson",
@@ -167,13 +165,13 @@ export const buildMap = (successCallback: () => void, errorCallback: () => void)
         view.ui.add(compass, "bottom-left")
         view.ui.add(home, "bottom-left")
         view.ui.add(layerList, "top-right")
-        view.ui.add(scaleBar, "bottom-right")
         view.ui.add(legend, "bottom-right")
+        view.ui.add(scaleBar, "bottom-right")
         view.when(() => {
             setTimeout(() => successCallback(), 5000);
             view.goTo({
                 center: [172.6306, -43.532],
-                zoom: 15,
+                zoom: 14,
             })
         })
     } else {
@@ -181,9 +179,24 @@ export const buildMap = (successCallback: () => void, errorCallback: () => void)
     }
 }
 
-const hexToRgb = (hex: string) => {
+export const hexToRgb = (hex: string) => {
     const r = parseInt(hex.slice(1, 3), 16),
         g = parseInt(hex.slice(3, 5), 16),
         b = parseInt(hex.slice(5, 7), 16);
     return [r, g, b, 0.5];
+}
+
+export const getColorBrewerFromString = (colorBrewerString: string) => {
+    switch (colorBrewerString) {
+        case 'YlGnBu':
+            return colorbrewer['YlGnBu'][5]
+        case 'BuGn':
+            return colorbrewer['BuGn'][5]
+        case 'YlOrRd':
+            return colorbrewer['YlOrRd'][5]
+        case 'PuRd':
+            return colorbrewer['PuRd'][5]
+        default:
+            return colorbrewer['YlGnBu'][5]
+    }
 }
