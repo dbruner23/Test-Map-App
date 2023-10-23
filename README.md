@@ -2,7 +2,7 @@
 
 <img src="./public/Screen Shot 2023-10-23 at 11.32.06 PM.png">
 
-This is an app employs the Esri Arcgis JS SDK to display NZ land parcel data on an interactive map. It is build on React-Typescript, and uses the Jest testing library as well as Redux.
+This app employs the Esri Arcgis JS SDK to display NZ land parcel data on an interactive map. It is build on React-Typescript, and uses the Jest testing library, as well as Redux for state management.
 
 ## How to run, test, and build:
 
