@@ -2,7 +2,7 @@
 
 <img src="./public/Screen Shot 2023-10-23 at 11.32.06 PM.png">
 
-This app employs the Esri Arcgis JS SDK to display NZ land parcel data on an interactive map. It is build on React-Typescript, and uses the Jest testing library, as well as Redux for state management.
+This app employs the Esri Arcgis JS SDK to display NZ land parcel data on an interactive map. It is built on React-Typescript, and uses the Jest testing library, as well as Redux for state management.
 
 ## How to run, test, and build:
 
@@ -27,12 +27,12 @@ The build is minified and the filenames include the hashes.\
 Then the app is ready to be deployed!
 
 ## Achievements and Challenges
-I'm pretty happy with how this one came out given the relatively short time spent on it. It works well and looks pretty, and in the end what more can you ask for?
+I'm pretty happy with how this one came out given the relatively short time spent on it. It works well and looks pretty, and I suppose that's a fair achievemet in a few hours. 
 
-I really enjoyed this first foray into the Arcgis SDK. There is so much you can do with it, and I feel like I am beging to understand the workflow and have whet the appetite to go deeper.
+I really enjoyed this first foray into the Arcgis SDK. There is so much you can do with it, and I feel like I am beginning to understand the workflow and have whet the appetite to go deeper.
 
-As awesome as this library is, the biggest challenges were getting it to play well with React and Jest. It took me quite a while to figure out how to mock all the modules just right so the Jest tests would run. Nonetheless, it was a good learning experience. 
+As awesome as this library is, my biggest challenges were getting it to play well with React and Jest. It took me quite a while to figure out how to mock all the modules just right so the Jest tests would run. Nonetheless, it was a good learning experience. 
 
-There is of course plenty of room for improvement. To make this app production ready I would love to dive deeper into the data and the Arcgis SDK, to see what interesting insights and analysis could be extracted and visualised in the app. As the NZ parcel data set is also quite large, the performance of the app could be certainly be improved. I would love to explore various methods of doing so. 
+There is of course plenty of room for improvement. To make this app production ready I would love to dive deeper into the data and the Arcgis SDK, to see what interesting insights and analysis could be extracted and visualised in the app. As the NZ parcel data set is also quite large, the performance of the app could be certainly be improved. I would love to explore various methods of doing so. Also the app would obviously need much wider test coverage, a CI/CD pipeline, more robust error handling, styling touch ups, not to mention a good deployment infrastructure solution. Lots of fun for another day.    
 
-Overall it was great fun. Hope you enjoy experimenting with it!
+Overall this was a fun challenge. Hope you enjoy experimenting with it!
